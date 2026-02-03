@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cowboys Corner Cafe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<header>
+  <img src="logo6.png" alt="Cowboys Corner Cafe">
+  <button class="menu-btn" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav id="menu">
+     <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu-section">Menu</a>
+    <a href="#contact">Contact</a>
+    <a href="#reviews">Reviews</a>
+  </nav>
+</header>
+
+<div class="hero">
+    <img src="./logo6.png" alt="">
+  <h1>Breakfast & Lunch</h1>
+  <p>Local • Friendly • Hearty</p>
+</div>
+
+<section id="about">
+  
+  <div class="content-container">
+  <div class="img-container">
+    <img src="./ccc3.png" alt="">
+  </div>
+  <div class="text-container">
+    <h2>About Us</h2>
+    <h2>Welcome to Cowboys Corner Cafe</h2>
+    <p> We are a friendly, local, family owned and operated breakfast and lunch spot in 
+        Watsonville, serving hearty comfort food and 
+        fresh-made favorites every day. We’re known for 
+        generous portions, welcoming service, and a relaxed 
+        western-style atmosphere. Whether you’re stopping in
+         for coffee or a full meal, you’ll always feel right
+          at home at our table.</p>
+  </div>
+</div>
+</section>
+
+
+<section id="menu-section" class="menu-section">
+  <div class="menu-title"><h2>Menu</h2>
+<p>Check Some Of Our House Favorites</p>
+</div>
+
+<div class="carousel-wrap">
+  <div class="carousel" id="carousel">
+
+    <!-- cards -->
+    <div class="card"><img src="./burger.jpg"><div class="card-content"><div class="card-title">Burger</div><div class="card-desc">Juicy burger</div></div></div>
+    <div class="card"><img src="./pizza.jpg"><div class="card-content"><div class="card-title">Pizza</div><div class="card-desc">Fresh pizza</div></div></div>
+    <div class="card"><img src="./salad.jpg"><div class="card-content"><div class="card-title">Salad</div><div class="card-desc">Healthy salad</div></div></div>
+    <div class="card"><img src="./pasta.jpg"><div class="card-content"><div class="card-title">Pasta</div><div class="card-desc">Creamy pasta</div></div></div>
+
+  </div>
+</div>
+<div class="menu-btns">
+    <a href="" class="btn"><h3>Check Full Menu</h3></a>
+    <p>Be sure to ask your server about our daily specials. 
+        Fresh, unique options to make your breakfast or lunch memorable!</p>
+</div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-row top-row">
+
+    <!-- Logo -->
+    <div class="contact-logo">
+      <img src="logo5.png" alt="Restaurant Logo">
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-items">
+
+      <a href="tel:+1234567890" class="contact-item">
+        📞 +1 (234) 567-890
+      </a>
+
+      <a href="https://www.google.com/maps/place/Cowboys+Corner+Cafe/@36.9161882,-121.7687046,17z/data=!3m1!4b1!4m6!3m5!1s0x808e1ae1c47544e1:0xedb3752128a0e107!8m2!3d36.9161839!4d-121.7661297!16s%2Fg%2F1v5k37ct?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-item">
+        📍 Google Maps
+      </a>
+
+      <a href="https://www.yelp.com/biz/cowboys-corner-cafe-watsonville" target="_blank" class="contact-item">
+        ⭐ Yelp
+      </a>
+
+    </div>
+
+    <!-- Social Media -->
+    <div class="socials">
+
+      <a href="https://www.instagram.com/cowboyscornercafe/" class="social-icon"> 
+        <!-- Instagram -->
+        <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+      </a>
+
+      <a href="https://www.facebook.com/pages/Cowboy%20Corner%20Cafe/130240343744650/" class="social-icon">
+        <!-- Facebook -->
+        <svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V8c0-1.2.3-2 2-2h2V2c-.4 0-1.7-.2-3.2-.2C10.5 1.8 9 3.5 9 6.6V10H6v4h3v8z"/></svg>
+      </a>
+
+      
+
+    </div>
+  </div>
+
+  <!-- Hours Row -->
+  <div class="contact-row hours-row">
+    <div class="hours">
+      <h3>Hours</h3>
+      <p>Mon–Thu: 11:00 – 21:00</p>
+      <p>Fri–Sat: 11:00 – 23:00</p>
+      <p>Sunday: 12:00 – 20:00</p>
+    </div>
+  </div>
+</section>
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="reviews-grid">
+
+    <div class="g-review">
+      <div class="g-review-header">
+        <div class="g-avatar">J</div>
+        <div>
+          <div class="g-name">John D</div>
+          <div class="g-meta">Local Guide · 2 weeks ago</div>
+        </div>
+      </div>
+
+      <div class="g-stars">★★★★★</div>
+
+      <p>
+        Best breakfast in town — friendly staff and huge portions.
+        The biscuits and gravy are amazing.
+      </p>
+    </div>
+
+
+    <div class="g-review">
+      <div class="g-review-header">
+        <div class="g-avatar">S</div>
+        <div>
+          <div class="g-name">Sarah M</div>
+          <div class="g-meta">3 reviews · 1 month ago</div>
+        </div>
+      </div>
+
+      <div class="g-stars">★★★★★</div>
+
+      <p>
+        Classic hometown cafe feel. Fast service and great coffee.
+        We stop every time we’re in Watsonville.
+      </p>
+    </div>
+
+
+    <div class="g-review">
+      <div class="g-review-header">
+        <div class="g-avatar">R</div>
+        <div>
+          <div class="g-name">Robert L</div>
+          <div class="g-meta">5 reviews · 3 weeks ago</div>
+        </div>
+      </div>
+
+      <div class="g-stars">★★★★☆</div>
+
+      <p>
+        Comfort food done right. Pancakes are fluffy and the bacon is perfect.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Cowboys Corner Cafe
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('show');
+}
+</script>
+<script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('show');
+}
+
+/* ✅ close menu on link click */
+document.querySelectorAll('#menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('menu').classList.remove('show');
+  });
+});
+</script>
+
+
+<script>
+const carousel = document.getElementById("carousel");
+const originals = [...carousel.children];
+
+// ---------- infinite clones ----------
+originals.forEach(card => {
+  carousel.appendChild(card.cloneNode(true));
+  carousel.insertBefore(card.cloneNode(true), carousel.firstChild);
+});
+
+const cardWidth = originals[0].offsetWidth + 20;
+
+// start centered on original set
+carousel.scrollLeft = cardWidth * originals.length;
+
+// ---------- infinite jump ----------
+carousel.addEventListener("scroll", () => {
+  if (carousel.scrollLeft <= 0) {
+    carousel.scrollLeft = cardWidth * originals.length;
+  }
+  if (carousel.scrollLeft >= cardWidth * originals.length * 2) {
+    carousel.scrollLeft = cardWidth * originals.length;
+  }
+});
+
+// ---------- drag ----------
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener("mousedown", e => {
+  isDown = true;
+  carousel.classList.add("dragging");
+  startX = e.pageX;
+  scrollLeft = carousel.scrollLeft;
+});
+
+window.addEventListener("mouseup", () => {
+  isDown = false;
+  carousel.classList.remove("dragging");
+  snapToCenter();
+});
+
+carousel.addEventListener("mousemove", e => {
+  if (!isDown) return;
+  carousel.scrollLeft = scrollLeft - (e.pageX - startX);
+});
+
+// ---------- touch ----------
+carousel.addEventListener("touchstart", e => {
+  startX = e.touches[0].pageX;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener("touchend", snapToCenter);
+
+carousel.addEventListener("touchmove", e => {
+  carousel.scrollLeft = scrollLeft - (e.touches[0].pageX - startX);
+});
+
+// ---------- snap to nearest card ----------
+function snapToCenter() {
+  const index = Math.round(carousel.scrollLeft / cardWidth);
+  carousel.scrollTo({
+    left: index * cardWidth,
+    behavior: "smooth"
+  });
+}
+</script>
+</body>
+</html>
