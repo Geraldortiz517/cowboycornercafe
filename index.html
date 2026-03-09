@@ -1,286 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<title>Cowboys Corner Cafe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet"
- href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Cowboys Corner Cafe</title>
 
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 
 <body>
 
 <header>
-  <img src="logo6.png" alt="Cowboys Corner Cafe">
-  <button class="menu-btn" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i>
-  </button>
-  <nav id="menu">
-     <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#menu-section">Menu</a>
-    <a href="#contact">Contact</a>
-    <a href="#reviews">Reviews</a>
-  </nav>
+
+<div class="logo">
+<img src="logo6.png">
+</div>
+
+<button class="menu-btn" id="menuBtn">
+<i class="fas fa-bars"></i>
+</button>
+
+<nav id="menu">
+
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#menu-section">Menu</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
-<div class="hero">
-    <img src="./logo6.png" alt="">
-  <h1>Breakfast & Lunch</h1>
-  <p>Local • Friendly • Hearty</p>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="./logo6.png">
+
+<h1>Breakfast & Lunch</h1>
+
+<p>Local • Friendly • Hearty</p>
+
+<a href="#menu-section" class="btn">View Menu</a>
+
 </div>
+
+</section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
-  
-  <div class="content-container">
-  <div class="img-container">
-    <img src="./ccc3.png" alt="">
-  </div>
-  <div class="text-container">
-    <h2>About Us</h2>
-    <h2>Welcome to Cowboys Corner Cafe</h2>
-    <p> We are a friendly, local, family owned and operated breakfast and lunch spot in 
-        Watsonville, serving hearty comfort food and 
-        fresh-made favorites every day. We’re known for 
-        generous portions, welcoming service, and a relaxed 
-        western-style atmosphere. Whether you’re stopping in
-         for coffee or a full meal, you’ll always feel right
-          at home at our table.</p>
-  </div>
+
+<div class="about-container">
+
+<div class="about-img">
+<img src="./ccc3.png">
+</div>
+
+<div class="about-text">
+
+<h2>Welcome to Cowboys Corner Cafe</h2>
+
+<p>
+We are a friendly, family-owned breakfast and lunch cafe in Watsonville.
+Known for generous portions, welcoming service and classic American comfort food.
+Stop by for fresh coffee, homemade favorites and a warm western atmosphere.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURED DISHES -->
+
+<section id="featured">
+
+<h2 class="section-title">House Favorite Of The Week</h2>
+
+<div class="featured-grid">
+
+
+<div class="featured-item">
+<img src="./scramble1.png">
+<h3>Breakfast Scramble</h3>
+<p>Eggs, bacon, potatoes and toast.</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- MENU CAROUSEL -->
+
+<section id="menu-section">
+
+<h2 class="section-title">Menu Highlights</h2>
+
+<div class="swiper mySwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide card">
+<img src="./pancake.png">
+<h3>Pancake Stack</h3>
+<p>Fluffy pancakes with syrup</p>
+</div>
+
+<div class="swiper-slide card">
+<img src="./omelet.png">
+<h3>Farmers Omelette</h3>
+<p>Eggs, veggies and cheese</p>
+</div>
+
+<div class="swiper-slide card">
+<img src="./scramble1.png">
+<h3>Breakfast Scramble</h3>
+<p>Eggs, bacon and potatoes</p>
+</div>
+
+<div class="swiper-slide card">
+<img src="./club.png">
+<h3>Club Sandwich</h3>
+<p>Classic triple stacked sandwich</p>
+</div>
+
+<div class="swiper-slide card">
+<img src="./scramble3.png">
+<h3>Country Breakfast</h3>
+<p>Eggs, sausage and toast</p>
+</div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+
+</div>
+<div style="text-align: center;">
+  <a class="btn" href="">Check Full Menu</a>
 </div>
 </section>
 
 
-<section id="menu-section" class="menu-section">
-  <div class="menu-title"><h2>Menu</h2>
-<p>Check Some Of Our House Favorites</p>
+<!-- WHY US -->
+
+<section id="why">
+
+<h2 class="section-title">Why Locals Love Us</h2>
+
+<div class="why-grid">
+
+<div class="why-item">
+<i class="fa-solid fa-utensils"></i>
+<h3>Hearty Portions</h3>
+<p>Classic breakfast served generously.</p>
 </div>
 
-<div class="carousel-wrap">
-  <div class="carousel" id="carousel">
-
-    <!-- cards -->
-    <div class="card"><img src="./burger.jpg"><div class="card-content"><div class="card-title">Burger</div><div class="card-desc">Juicy burger</div></div></div>
-    <div class="card"><img src="./pizza.jpg"><div class="card-content"><div class="card-title">Pizza</div><div class="card-desc">Fresh pizza</div></div></div>
-    <div class="card"><img src="./salad.jpg"><div class="card-content"><div class="card-title">Salad</div><div class="card-desc">Healthy salad</div></div></div>
-    <div class="card"><img src="./pasta.jpg"><div class="card-content"><div class="card-title">Pasta</div><div class="card-desc">Creamy pasta</div></div></div>
-
-  </div>
+<div class="why-item">
+<i class="fa-solid fa-heart"></i>
+<h3>Family Owned</h3>
+<p>A welcoming cafe run with care.</p>
 </div>
-<div class="menu-btns">
-    <a href="" class="btn"><h3>Check Full Menu</h3></a>
-    <p>Be sure to ask your server about our daily specials. 
-        Fresh, unique options to make your breakfast or lunch memorable!</p>
+
+<div class="why-item">
+<i class="fa-solid fa-mug-hot"></i>
+<h3>Fresh Coffee</h3>
+<p>Start your day with great coffee.</p>
 </div>
+
+<div class="why-item">
+<i class="fa-solid fa-star"></i>
+<h3>Local Favorite</h3>
+<p>A trusted spot for the community.</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="contact" class="contact-section">
-  <div class="contact-row top-row">
 
-    <!-- Logo -->
-    <div class="contact-logo">
-      <img src="logo5.png" alt="Restaurant Logo">
-    </div>
 
-    <!-- Contact Info -->
-    <div class="contact-items">
 
-      <a href="tel:+1234567890" class="contact-item">
-        📞 +1 (234) 567-890
-      </a>
+<!-- REVIEWS -->
 
-      <a href="https://www.google.com/maps/place/Cowboys+Corner+Cafe/@36.9161882,-121.7687046,17z/data=!3m1!4b1!4m6!3m5!1s0x808e1ae1c47544e1:0xedb3752128a0e107!8m2!3d36.9161839!4d-121.7661297!16s%2Fg%2F1v5k37ct?entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-item">
-        📍 Google Maps
-      </a>
-
-      <a href="https://www.yelp.com/biz/cowboys-corner-cafe-watsonville" target="_blank" class="contact-item">
-        ⭐ Yelp
-      </a>
-
-    </div>
-
-    <!-- Social Media -->
-    <div class="socials">
-
-      <a href="https://www.instagram.com/cowboyscornercafe/" class="social-icon"> 
-        <!-- Instagram -->
-        <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
-      </a>
-
-      <a href="https://www.facebook.com/pages/Cowboy%20Corner%20Cafe/130240343744650/" class="social-icon">
-        <!-- Facebook -->
-        <svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V8c0-1.2.3-2 2-2h2V2c-.4 0-1.7-.2-3.2-.2C10.5 1.8 9 3.5 9 6.6V10H6v4h3v8z"/></svg>
-      </a>
-
-      
-
-    </div>
-  </div>
-
-  <!-- Hours Row -->
-  <div class="contact-row hours-row">
-    <div class="hours">
-      <h3>Hours</h3>
-      <p>Mon–Thu: 11:00 – 21:00</p>
-      <p>Fri–Sat: 11:00 – 23:00</p>
-      <p>Sunday: 12:00 – 20:00</p>
-    </div>
-  </div>
-</section>
 <section id="reviews">
-  <h2>Customer Reviews</h2>
 
-  <div class="reviews-grid">
+<h2 class="section-title">Customer Reviews</h2>
 
-    <div class="g-review">
-      <div class="g-review-header">
-        <div class="g-avatar">J</div>
-        <div>
-          <div class="g-name">John D</div>
-          <div class="g-meta">Local Guide · 2 weeks ago</div>
-        </div>
-      </div>
+<div class="reviews-grid">
 
-      <div class="g-stars">★★★★★</div>
+<div class="review">
 
-      <p>
-        Best breakfast in town — friendly staff and huge portions.
-        The biscuits and gravy are amazing.
-      </p>
-    </div>
+<div class="review-header">
+<div class="avatar">J</div>
+<div>
+<div class="name">John D</div>
+<div class="meta">Local Guide · 2 weeks ago</div>
+</div>
+</div>
 
+<div class="stars">★★★★★</div>
 
-    <div class="g-review">
-      <div class="g-review-header">
-        <div class="g-avatar">S</div>
-        <div>
-          <div class="g-name">Sarah M</div>
-          <div class="g-meta">3 reviews · 1 month ago</div>
-        </div>
-      </div>
+<p>
+Best breakfast in town! Huge portions and friendly service.
+</p>
 
-      <div class="g-stars">★★★★★</div>
-
-      <p>
-        Classic hometown cafe feel. Fast service and great coffee.
-        We stop every time we’re in Watsonville.
-      </p>
-    </div>
+</div>
 
 
-    <div class="g-review">
-      <div class="g-review-header">
-        <div class="g-avatar">R</div>
-        <div>
-          <div class="g-name">Robert L</div>
-          <div class="g-meta">5 reviews · 3 weeks ago</div>
-        </div>
-      </div>
+<div class="review">
 
-      <div class="g-stars">★★★★☆</div>
+<div class="review-header">
+<div class="avatar">S</div>
+<div>
+<div class="name">Sarah M</div>
+<div class="meta">3 reviews · 1 month ago</div>
+</div>
+</div>
 
-      <p>
-        Comfort food done right. Pancakes are fluffy and the bacon is perfect.
-      </p>
-    </div>
+<div class="stars">★★★★★</div>
 
-  </div>
+<p>
+Classic hometown cafe feel and great coffee.
+</p>
+
+</div>
+
+
+<div class="review">
+
+<div class="review-header">
+<div class="avatar">R</div>
+<div>
+<div class="name">Robert L</div>
+<div class="meta">5 reviews · 3 weeks ago</div>
+</div>
+</div>
+
+<div class="stars">★★★★☆</div>
+
+<p>
+Comfort food done right. Pancakes are amazing.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- CONTACT / LOCATION -->
+
+<section id="contact">
+
+<h2 class="section-title">Visit Us</h2>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<p><i class="fa-solid fa-phone"></i> +1 (234) 567-890</p>
+<p><i class="fa-solid fa-location-dot"></i> Watsonville, California</p>
+<p><i class="fa-solid fa-clock"></i> Open Daily</p>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/cowboyscornercafe/"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com/pages/Cowboy%20Corner%20Cafe/130240343744650/"><i class="fab fa-facebook"></i></a>
+<a href="https://www.yelp.com/biz/cowboys-corner-cafe-watsonville"><i class="fab fa-yelp"></i></a>
+
+</div>
+
+</div>
+
+<div class="map">
+
+<iframe
+src="https://www.google.com/maps?q=cowboys+corner+cafe+watsonville&output=embed"
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
 
 <footer>
-  © 2026 Cowboys Corner Cafe
+
+<p>© 2026 Cowboys Corner Cafe</p>
+
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
-function toggleMenu() {
-  document.getElementById('menu').classList.toggle('show');
-}
-</script>
-<script>
-function toggleMenu() {
-  document.getElementById('menu').classList.toggle('show');
+
+const swiper = new Swiper(".mySwiper", {
+
+loop:true,
+spaceBetween:20,
+
+navigation:{
+nextEl:".swiper-button-next",
+prevEl:".swiper-button-prev"
+},
+
+breakpoints:{
+640:{slidesPerView:1},
+768:{slidesPerView:2},
+1024:{slidesPerView:3}
 }
 
-/* ✅ close menu on link click */
-document.querySelectorAll('#menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('menu').classList.remove('show');
+})
+
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+// Toggle menu
+menuBtn.onclick = () => menu.classList.toggle("show");
+
+// Close menu when clicking a link
+document.querySelectorAll("#menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("show");
   });
 });
 </script>
 
-
-<script>
-const carousel = document.getElementById("carousel");
-const originals = [...carousel.children];
-
-// ---------- infinite clones ----------
-originals.forEach(card => {
-  carousel.appendChild(card.cloneNode(true));
-  carousel.insertBefore(card.cloneNode(true), carousel.firstChild);
-});
-
-const cardWidth = originals[0].offsetWidth + 20;
-
-// start centered on original set
-carousel.scrollLeft = cardWidth * originals.length;
-
-// ---------- infinite jump ----------
-carousel.addEventListener("scroll", () => {
-  if (carousel.scrollLeft <= 0) {
-    carousel.scrollLeft = cardWidth * originals.length;
-  }
-  if (carousel.scrollLeft >= cardWidth * originals.length * 2) {
-    carousel.scrollLeft = cardWidth * originals.length;
-  }
-});
-
-// ---------- drag ----------
-let isDown = false;
-let startX;
-let scrollLeft;
-
-carousel.addEventListener("mousedown", e => {
-  isDown = true;
-  carousel.classList.add("dragging");
-  startX = e.pageX;
-  scrollLeft = carousel.scrollLeft;
-});
-
-window.addEventListener("mouseup", () => {
-  isDown = false;
-  carousel.classList.remove("dragging");
-  snapToCenter();
-});
-
-carousel.addEventListener("mousemove", e => {
-  if (!isDown) return;
-  carousel.scrollLeft = scrollLeft - (e.pageX - startX);
-});
-
-// ---------- touch ----------
-carousel.addEventListener("touchstart", e => {
-  startX = e.touches[0].pageX;
-  scrollLeft = carousel.scrollLeft;
-});
-
-carousel.addEventListener("touchend", snapToCenter);
-
-carousel.addEventListener("touchmove", e => {
-  carousel.scrollLeft = scrollLeft - (e.touches[0].pageX - startX);
-});
-
-// ---------- snap to nearest card ----------
-function snapToCenter() {
-  const index = Math.round(carousel.scrollLeft / cardWidth);
-  carousel.scrollTo({
-    left: index * cardWidth,
-    behavior: "smooth"
-  });
-}
-</script>
 </body>
 </html>
