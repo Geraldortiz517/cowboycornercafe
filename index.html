@@ -86,11 +86,7 @@ Stop by for fresh coffee, homemade favorites and a warm western atmosphere.
 </div>
 
 </div>
-
-</section>
-
-
-<!-- FEATURED DISHES -->
+<!-- FEATURED DISH -->
 
 <section id="featured">
 
@@ -98,13 +94,20 @@ Stop by for fresh coffee, homemade favorites and a warm western atmosphere.
 
 <div class="featured-grid">
 
-
 <div class="featured-item">
-<img src="./scramble1.png">
-<h3>Breakfast Scramble</h3>
-<p>Eggs, bacon, potatoes and toast.</p>
-</div>
 
+<img 
+src="./scramble1.png"
+class="featured-img"
+alt="Breakfast Scramble"
+data-title="Breakfast Scramble"
+data-desc="A hearty breakfast scramble with eggs, crispy bacon, golden potatoes and toast. A local favorite that delivers the perfect start to your day.">
+
+<h3>Breakfast Scramble</h3>
+
+<p>Eggs, bacon, potatoes and toast.</p>
+
+</div>
 
 </div>
 
@@ -122,31 +125,47 @@ Stop by for fresh coffee, homemade favorites and a warm western atmosphere.
 <div class="swiper-wrapper">
 
 <div class="swiper-slide card">
-<img src="./pancake.png">
+  <img 
+src="./pancake.png"
+data-title="Pancake Stack"
+data-desc="Fluffy pancakes served with butter and maple syrup.">
 <h3>Pancake Stack</h3>
 <p>Fluffy pancakes with syrup</p>
 </div>
 
 <div class="swiper-slide card">
-<img src="./omelet.png">
+  <img 
+src="./omelet.png"
+data-title="Farmers Omelette"
+data-desc="Eggs, veggies and cheese.">
 <h3>Farmers Omelette</h3>
 <p>Eggs, veggies and cheese</p>
 </div>
 
 <div class="swiper-slide card">
-<img src="./scramble1.png">
+    <img 
+src="./scramble1.png"
+data-title="Breakfast Scramble"
+data-desc="Eggs, bacon and potatoes.">
+
 <h3>Breakfast Scramble</h3>
 <p>Eggs, bacon and potatoes</p>
 </div>
 
 <div class="swiper-slide card">
-<img src="./club.png">
+      <img 
+src="./club.png"
+data-title="Club Sandwich"
+data-desc="Classic triple stacked sandwich.">
 <h3>Club Sandwich</h3>
 <p>Classic triple stacked sandwich</p>
 </div>
 
 <div class="swiper-slide card">
-<img src="./scramble3.png">
+        <img 
+src="./scramble3.png"
+data-title="Country Breakfast"
+data-desc="Eggs, sausage and toast.">
 <h3>Country Breakfast</h3>
 <p>Eggs, sausage and toast</p>
 </div>
@@ -160,6 +179,8 @@ Stop by for fresh coffee, homemade favorites and a warm western atmosphere.
 <div style="text-align: center;">
   <a class="btn" href="">Check Full Menu</a>
 </div>
+
+
 </section>
 
 
@@ -314,42 +335,186 @@ loading="lazy">
 <p>© 2026 Cowboys Corner Cafe</p>
 
 </footer>
+<div id="featuredPopup" class="featured-popup">
 
+<div class="featured-popup-card">
+
+<button class="featured-close">&times;</button>
+
+<img id="featuredPopupImg" src="">
+
+<h2 id="featuredPopupTitle"></h2>
+
+<p id="featuredPopupDesc"></p>
+
+</div>
+
+</div>
+<div id="imagePopup" class="popup-overlay">
+
+<button class="popup-close">&times;</button>
+
+<button class="popup-prev">&#10094;</button>
+
+<div class="popup-card">
+
+<img id="popupImg" src="">
+
+<div class="popup-info">
+
+<h2 id="popupTitle"></h2>
+
+<p id="popupDesc"></p>
+
+</div>
+
+</div>
+
+<button class="popup-next">&#10095;</button>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
+const popup = document.getElementById("imagePopup")
+const popupImg = document.getElementById("popupImg")
+const popupTitle = document.getElementById("popupTitle")
+const popupDesc = document.getElementById("popupDesc")
 
-const swiper = new Swiper(".mySwiper", {
+const nextBtn = document.querySelector(".popup-next")
+const prevBtn = document.querySelector(".popup-prev")
+const closeBtn = document.querySelector(".popup-close")
 
-loop:true,
-spaceBetween:20,
+const images = document.querySelectorAll(".card img")
 
-navigation:{
-nextEl:".swiper-button-next",
-prevEl:".swiper-button-prev"
-},
+let currentIndex = 0
 
-breakpoints:{
-640:{slidesPerView:1},
-768:{slidesPerView:2},
-1024:{slidesPerView:3}
-}
+
+images.forEach((img,index)=>{
+
+img.addEventListener("click",()=>{
+
+currentIndex = index
+
+showDish()
+
+popup.classList.add("show")
 
 })
 
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
+})
 
-// Toggle menu
-menuBtn.onclick = () => menu.classList.toggle("show");
 
-// Close menu when clicking a link
-document.querySelectorAll("#menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("show");
-  });
-});
+function showDish(){
+
+const img = images[currentIndex]
+
+popupImg.src = img.src
+popupTitle.textContent = img.dataset.title
+popupDesc.textContent = img.dataset.desc
+
+}
+
+
+function nextImage(){
+
+currentIndex++
+
+if(currentIndex >= images.length){
+currentIndex = 0
+}
+
+showDish()
+
+}
+
+
+function prevImage(){
+
+currentIndex--
+
+if(currentIndex < 0){
+currentIndex = images.length - 1
+}
+
+showDish()
+
+}
+
+
+nextBtn.onclick = nextImage
+prevBtn.onclick = prevImage
+
+closeBtn.onclick = ()=> popup.classList.remove("show")
+
+popup.onclick = e=>{
+if(e.target === popup){
+popup.classList.remove("show")
+}
+}
+
+
+/* KEYBOARD */
+
+document.addEventListener("keydown",e=>{
+
+if(!popup.classList.contains("show")) return
+
+if(e.key==="ArrowRight") nextImage()
+if(e.key==="ArrowLeft") prevImage()
+if(e.key==="Escape") popup.classList.remove("show")
+
+})
+
+
+/* SWIPE */
+
+let startX = 0
+
+popup.addEventListener("touchstart",e=>{
+startX = e.touches[0].clientX
+})
+
+popup.addEventListener("touchend",e=>{
+
+let endX = e.changedTouches[0].clientX
+
+if(startX-endX>50) nextImage()
+if(endX-startX>50) prevImage()
+
+})
+const featuredPopup = document.getElementById("featuredPopup")
+const featuredImg = document.getElementById("featuredPopupImg")
+const featuredTitle = document.getElementById("featuredPopupTitle")
+const featuredDesc = document.getElementById("featuredPopupDesc")
+const featuredClose = document.querySelector(".featured-close")
+
+const featuredImages = document.querySelectorAll(".featured-img")
+
+featuredImages.forEach(img => {
+
+img.addEventListener("click", () => {
+
+featuredPopup.classList.add("show")
+
+featuredImg.src = img.src
+featuredTitle.textContent = img.dataset.title
+featuredDesc.textContent = img.dataset.desc
+
+})
+
+})
+
+featuredClose.onclick = () => {
+featuredPopup.classList.remove("show")
+}
+
+featuredPopup.onclick = (e) => {
+if(e.target === featuredPopup){
+featuredPopup.classList.remove("show")
+}
+}
 </script>
 
 </body>
