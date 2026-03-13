@@ -376,7 +376,55 @@ loading="lazy">
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
 
+document.addEventListener("DOMContentLoaded", () => {
+
+const swiper = new Swiper(".mySwiper", {
+
+loop: true,
+spaceBetween: 20,
+
+navigation:{
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev"
+},
+
+breakpoints:{
+640:{slidesPerView:1},
+768:{slidesPerView:2},
+1024:{slidesPerView:3}
+}
+
+});
+
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+/* Toggle menu */
+
+menuBtn.addEventListener("click", () => {
+menu.classList.toggle("show");
+});
+
+/* Close menu when clicking a link */
+
+document.querySelectorAll("#menu a").forEach(link => {
+link.addEventListener("click", () => {
+menu.classList.remove("show");
+});
+});
+
+});
+
+</script>
 <script>
 const popup = document.getElementById("imagePopup")
 const popupImg = document.getElementById("popupImg")

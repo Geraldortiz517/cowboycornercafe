@@ -460,8 +460,9 @@ border-radius:15px 15px 0 0;
 
 .swiper-button-next,
 .swiper-button-prev{
-color:#a84a2d;
+color:#ffff !important;
 }
+
 
 /* WHY */
 
